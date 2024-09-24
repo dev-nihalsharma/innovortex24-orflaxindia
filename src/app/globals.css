@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background-color: var(--background); /* Use background-color for better compatibility */
+  font-family: 'Montserrat', 'Arial', 'Helvetica', 'sans-serif';
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --border: #E0D8DE; /* Define border color here */
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+  }
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border); /* Instead of border-border */
+  }
+  body {
+    background-color: var(--background); /* Replace bg-background */
+    color: var(--foreground); /* Replace text-foreground */
+  }
+}
+
+/* Add this to your global CSS file */
+.backdrop-blur-md {
+  backdrop-filter: blur(10px);
+}
+
+.bg-opacity-50 {
+  background-color: rgba(55, 65, 81, 0.5); /* Adjust for your color */
+}
